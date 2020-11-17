@@ -1,0 +1,61 @@
+﻿<process name="FlipkartProcess" version="1.0" bpversion="6.9.0.26970" narrative="" byrefcollection="true" preferredid="fb2e96f4-d51c-4ba3-9a5a-17a8e49881fb" published="true">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="52b441f5-ca48-4689-b5f4-59b6f6b94a8e" name="Start" type="Start">
+    <display x="0" y="-180" />
+    <onsuccess>8911d863-7344-44c4-b19e-6c1410e851e7</onsuccess>
+  </stage>
+  <stage stageid="b9353a40-ff58-4582-8ae1-5b197b1f267a" name="End" type="End">
+    <display x="0" y="180" />
+  </stage>
+  <stage stageid="a0722805-a45c-4a06-b3fa-74135968df81" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="8911d863-7344-44c4-b19e-6c1410e851e7" name="Action1" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="-135" />
+    <onsuccess>cf685ba0-8af3-46aa-8ab0-656831dc44fd</onsuccess>
+    <resource object="flipkart" action="LaunchApplication" />
+  </stage>
+  <stage stageid="cf685ba0-8af3-46aa-8ab0-656831dc44fd" name="flipkart::Search" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="-90" />
+    <onsuccess>e356cc16-21fb-4d4e-94ff-287410502e04</onsuccess>
+    <resource object="flipkart" action="Search" />
+  </stage>
+  <stage stageid="e356cc16-21fb-4d4e-94ff-287410502e04" name="flipkart::Write data in excel" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="-45" />
+    <onsuccess>83be2dfd-1031-40e8-b093-19897fccd7f1</onsuccess>
+    <resource object="flipkart" action="Write data in excel" />
+  </stage>
+  <stage stageid="83be2dfd-1031-40e8-b093-19897fccd7f1" name="flipkart::data verification" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="0" />
+    <onsuccess>e4040c6a-2535-467c-b1cc-ce3133638bde</onsuccess>
+    <resource object="flipkart" action="data verification" />
+  </stage>
+  <stage stageid="e4040c6a-2535-467c-b1cc-ce3133638bde" name="flipkart::insert data into DB" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="45" />
+    <onsuccess>4ff088c8-e768-47ec-8e5e-df1bfbbefa6a</onsuccess>
+    <resource object="flipkart" action="insert data into DB" />
+  </stage>
+  <stage stageid="4ff088c8-e768-47ec-8e5e-df1bfbbefa6a" name="flipkart::Write data in excel" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="90" />
+    <onsuccess>fc885c43-3fcd-4841-9307-4bcb58293abe</onsuccess>
+    <resource object="flipkart" action="Write data in excel" />
+  </stage>
+  <stage stageid="fc885c43-3fcd-4841-9307-4bcb58293abe" name="flipkart::get color" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="0" y="135" />
+    <onsuccess>b9353a40-ff58-4582-8ae1-5b197b1f267a</onsuccess>
+    <resource object="flipkart" action="get color" />
+  </stage>
+</process>

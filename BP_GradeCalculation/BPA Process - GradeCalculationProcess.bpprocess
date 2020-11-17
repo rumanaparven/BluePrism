@@ -1,0 +1,25 @@
+﻿<process name="GradeCalculationProcess" version="1.0" bpversion="6.9.0.26970" narrative="" byrefcollection="true" preferredid="169505b0-d887-4c85-8c3b-7267c7c3a8fb">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="21e6d3e6-437a-4148-808a-10f8fa47629b" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>44c4bbe3-cf1b-4c67-a83d-947c7c8c8926</onsuccess>
+  </stage>
+  <stage stageid="5c30fb30-88b8-4145-85ae-fb19cda9e820" name="End" type="End">
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="cccce95b-5026-4366-b20e-2ece2ff69b94" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="44c4bbe3-cf1b-4c67-a83d-947c7c8c8926" name="Grade Calculation::Grade" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <onsuccess>5c30fb30-88b8-4145-85ae-fb19cda9e820</onsuccess>
+    <resource object="Grade Calculation" action="Grade" />
+  </stage>
+</process>

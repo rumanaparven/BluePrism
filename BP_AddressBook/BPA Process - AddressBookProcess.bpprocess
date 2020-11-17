@@ -1,0 +1,37 @@
+﻿<process name="AddressBookProcess" version="1.0" bpversion="6.9.0.26970" narrative="CRUD operations on address book" byrefcollection="true" preferredid="9a21b7d3-2547-4ec8-ad6d-460bd72a6249">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="b9872da0-6c60-41da-af14-8e808492f9a1" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>ece73645-5862-404f-9c56-9b2d6d7ef90f</onsuccess>
+  </stage>
+  <stage stageid="03187bfb-4231-4b06-9d44-d3305f1c5895" name="End" type="End">
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="1e6563fc-58ea-4566-9c94-8a6147d7787f" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="ece73645-5862-404f-9c56-9b2d6d7ef90f" name="Address Book::read and update into db" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <onsuccess>81b5b41b-31fd-48f8-a504-b0ae2571b6d5</onsuccess>
+    <resource object="Address Book" action="read and update into db" />
+  </stage>
+  <stage stageid="81b5b41b-31fd-48f8-a504-b0ae2571b6d5" name="Address Book::delete from db" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <onsuccess>4bb02b1d-0c62-42fd-ae4f-84227fd75f00</onsuccess>
+    <resource object="Address Book" action="delete from db" />
+  </stage>
+  <stage stageid="4bb02b1d-0c62-42fd-ae4f-84227fd75f00" name="Address Book::get details by name" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="45" />
+    <onsuccess>03187bfb-4231-4b06-9d44-d3305f1c5895</onsuccess>
+    <resource object="Address Book" action="get details by name" />
+  </stage>
+</process>

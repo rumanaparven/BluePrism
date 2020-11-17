@@ -1,0 +1,25 @@
+﻿<process name="RPAChallengeProcess" version="1.0" bpversion="6.9.0.26970" narrative="" byrefcollection="true" preferredid="03d8461f-0d48-453c-a4a6-9afc60a70e2c">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="e7def2be-c317-422f-b981-8b3fd55aaee4" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>1469ec24-547c-4e9c-9ea6-e3dc4a9fb0ae</onsuccess>
+  </stage>
+  <stage stageid="c385ec7a-ba8c-4f34-93fe-12ed84e24922" name="End" type="End">
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="5b5f06c8-f029-4654-b692-4e9c9fd4d01f" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="1469ec24-547c-4e9c-9ea6-e3dc4a9fb0ae" name="RPA Challenge::Enter details and submit" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-30" />
+    <onsuccess>c385ec7a-ba8c-4f34-93fe-12ed84e24922</onsuccess>
+    <resource object="RPA Challenge" action="Enter details and submit" />
+  </stage>
+</process>

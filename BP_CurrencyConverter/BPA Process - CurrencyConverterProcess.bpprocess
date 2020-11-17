@@ -1,0 +1,58 @@
+﻿<process name="CurrencyConverterProcess" version="1.0" bpversion="6.9.0.26970" narrative="" byrefcollection="true" preferredid="e20c4d9f-77c5-44ba-958b-a2fc192411d3">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="18c63f68-40a3-411f-bc33-c6ba797e59c0" name="Start" type="Start">
+    <display x="15" y="-180" />
+    <onsuccess>93ae988b-4c50-45b7-8039-5962cad93820</onsuccess>
+  </stage>
+  <stage stageid="b01955e7-3a24-499e-a883-208c12b79ce6" name="End" type="End">
+    <display x="15" y="135" />
+  </stage>
+  <stage stageid="e56c4da6-0147-4290-a6fd-d0637b9711fb" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="93ae988b-4c50-45b7-8039-5962cad93820" name="Currency Converter::Launch Currency Converter" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-120" />
+    <onsuccess>3e015284-8b81-4b8e-b983-021fdfd3a554</onsuccess>
+    <resource object="Currency Converter" action="Launch Currency Converter" />
+  </stage>
+  <stage stageid="3e015284-8b81-4b8e-b983-021fdfd3a554" name="Currency Converter::Get Data from Excel" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <onsuccess>b9025207-e38a-41f0-be8b-fc05c722a9af</onsuccess>
+    <resource object="Currency Converter" action="Get Data from Excel" />
+  </stage>
+  <stage stageid="b9025207-e38a-41f0-be8b-fc05c722a9af" name="Currency Converter::Input Amount" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Amount" friendlyname="Amount" expr="" />
+    </inputs>
+    <onsuccess>c7243734-a7bf-448b-b977-441db060bc3a</onsuccess>
+    <resource object="Currency Converter" action="Input Amount" />
+  </stage>
+  <stage stageid="c7243734-a7bf-448b-b977-441db060bc3a" name="Currency Converter::Get Input Country Type" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="text" name="CountryCode" friendlyname="CountryCode" expr="" />
+    </inputs>
+    <onsuccess>00c6df02-1fae-4874-8896-60ae0ac61750</onsuccess>
+    <resource object="Currency Converter" action="Get Input Country Type" />
+  </stage>
+  <stage stageid="00c6df02-1fae-4874-8896-60ae0ac61750" name="Currency Converter::select go and read output" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="text" name="Result" friendlyname="Result" stage="" />
+    </outputs>
+    <onsuccess>b01955e7-3a24-499e-a883-208c12b79ce6</onsuccess>
+    <resource object="Currency Converter" action="select go and read output" />
+  </stage>
+</process>
